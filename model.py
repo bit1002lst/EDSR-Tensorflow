@@ -169,7 +169,7 @@ class EDSR(object):
                                         tmp_image[j*tmp.shape[0]:(j+1)*tmp.shape[0],-1*tmp.shape[1]:] = tmp
 			return tmp_image
 		else:
-			return self.sess.run(self.out,feed_dict={self.input:x})
+			return self.sess.run(self.out,feed_dict={self.input:x})[0]
 
 	"""
 	Function to setup your input data pipeline
